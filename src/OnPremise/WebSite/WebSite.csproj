@@ -1016,6 +1016,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>SignInModel.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Content Include="Areas\Admin\Content\Admin.css.map">
+      <DependentUpon>Admin.css</DependentUpon>
+    </Content>
     <None Include="Areas\Admin\Content\Admin.less" />
     <EmbeddedResource Include="App_LocalResources\Account\SignIn.cshtml.fr.resx">
       <DependentUpon>SignIn.cshtml.resx</DependentUpon>
@@ -1067,6 +1070,9 @@
     <Content Include="Content\jquery.mobile.theme-1.2.0.css" />
     <Content Include="Content\jquery.mobile.theme-1.2.0.min.css" />
     <Content Include="Content\Mobile.css">
+      <DependentUpon>Mobile.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile.min.css">
       <DependentUpon>Mobile.less</DependentUpon>
     </Content>
     <Content Include="Content\Site.css">
@@ -1190,6 +1196,12 @@
     <Content Include="Areas\Admin\Views\Protocol\ADFSIntegration.cshtml" />
     <Content Include="Areas\Admin\Views\OpenIdConnectClient\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\OpenIdConnectClient\Index.cshtml" />
+    <Content Include="Content\Mobile.css.map">
+      <DependentUpon>Mobile.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css.map">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
