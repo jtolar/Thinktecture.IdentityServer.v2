@@ -12,7 +12,9 @@ namespace Thinktecture.IdentityServer.Models
     public class RelyingParty
     {
         [Required]
+// ReSharper disable Mvc.TemplateNotResolved
         [UIHint("HiddenInput")]
+// ReSharper restore Mvc.TemplateNotResolved
         public string Id { get; set; }
         
         [Display(ResourceType = typeof (Resources.Models.RelyingParty), Name = "Enabled", Description = "EnabledDescription")]

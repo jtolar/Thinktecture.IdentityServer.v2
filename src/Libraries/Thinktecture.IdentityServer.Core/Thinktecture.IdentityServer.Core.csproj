@@ -288,7 +288,9 @@
     <Compile Include="Tracing\Tracing.cs" />
     <Compile Include="AbsoluteUriAttribute.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Menu\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

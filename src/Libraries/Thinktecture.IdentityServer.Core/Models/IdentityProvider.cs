@@ -11,7 +11,9 @@ namespace Thinktecture.IdentityServer.Models
 {
     public class IdentityProvider : IValidatableObject
     {
+// ReSharper disable Mvc.TemplateNotResolved
         [UIHint("HiddenInput")]
+// ReSharper restore Mvc.TemplateNotResolved
         public int ID { get; set; }
 
         [Required]
@@ -38,7 +40,9 @@ namespace Thinktecture.IdentityServer.Models
         public string WSFederationEndpoint { get; set; }
 
         string _IssuerThumbprint;
+        // ReSharper disable Mvc.TemplateNotResolved
         [UIHint("Thumbprint")]
+        // ReSharper restore Mvc.TemplateNotResolved
         [Display(Order = 7, ResourceType = typeof (Resources.Models.IdentityProvider), Name = "IssuerThumbprint", Description = "IssuerThumbprintDescription")]
         public string IssuerThumbprint
         {

@@ -11,7 +11,9 @@ namespace Thinktecture.IdentityServer.Models
 {
     public class Client : IValidatableObject
     {
+// ReSharper disable Mvc.TemplateNotResolved
         [UIHint("HiddenInput")]
+// ReSharper restore Mvc.TemplateNotResolved
         public int ID { get; set; }
 
         [Display(ResourceType = typeof (Resources.Models.Client), Name = "Name", Description = "NameDescription")]
@@ -30,7 +32,9 @@ namespace Thinktecture.IdentityServer.Models
         [UIHint("SymmetricKey")]
         public string ClientSecret { get; set; }
 
+// ReSharper disable Mvc.TemplateNotResolved
         [UIHint("HiddenInput")]
+// ReSharper restore Mvc.TemplateNotResolved
         public bool HasClientSecret { get; set; }
 
         [AbsoluteUri]
