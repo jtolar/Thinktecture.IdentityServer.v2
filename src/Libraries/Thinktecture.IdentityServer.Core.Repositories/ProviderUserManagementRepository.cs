@@ -71,22 +71,23 @@ namespace Thinktecture.IdentityServer.Repositories
             { }
         }
 
-        public IEnumerable<string> GetUsers(int start, int count, out int totalCount)
+        public IEnumerable<string> GetUsers(int pageIndex, int count, out int totalCount)
         {
-            var items = Membership.GetAllUsers(start, count, out totalCount).OfType<MembershipUser>();
+            var items = Membership.GetAllUsers(pageIndex, count, out totalCount).OfType<MembershipUser>();
             return items.Select(x => x.UserName);
         }
 
-        public IEnumerable<string> GetUsers(string filter, int start, int count, out int totalCount)
+        public IEnumerable<string> GetUsers(string filter, int pageIndex, int count, out int totalCount)
         {
             var items = Membership.GetAllUsers().OfType<MembershipUser>();
+			filter = filter.ToLower();
             var query =
                 from user in items
-                where user.UserName.Contains(filter) ||
-                      (user.Email != null && user.Email.Contains(filter))
+                where user.UserName.ToLower().Contains(filter) ||
+                      (user.Email != null && user.Email.ToLower().Contains(filter))
                 select user.UserName;
             totalCount = query.Count();
-            return query.Skip(start).Take(count);
+            return query.Skip(pageIndex * count).Take(count);
         }
 
         public void SetPassword(string userName, string password)
